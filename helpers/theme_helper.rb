@@ -37,8 +37,8 @@ def render_similar_posts(article)
     tablo = mylist.sort_by {rand}[0,5]
 
     html = "<div id='related'>"
-    html << "<h3>À lire également</h3>"
-    html << "<p>Si <em>#{article.title}</em> vous a intéressé, vous pouvez poursuivre votre lecture avec ces billets similaires :</p>"
+    html << "<h3>Related posts</h3>"
+    html << "<p>If you've liked <em>#{article.title}</em> the following articles may interest you:</p>"
   	html << "<ul>"
 
     tablo.each do |article|
@@ -50,7 +50,7 @@ def render_similar_posts(article)
 end
 
 def pluralize_comments(comments)
-  "#{comments} #{pluralize(comments, 'commentaire', 'commentaire', 'commentaires')}"
+  "#{comments} #{pluralize(comments, 'comments', 'comment', 'comments')}"
 end
 
 def category_name(id)
