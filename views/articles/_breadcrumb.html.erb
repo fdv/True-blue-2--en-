@@ -3,13 +3,13 @@ breadcrumb = ""
 if controller.controller_name == "articles" and controller.action_name == "index" and !params[:page]
   breadcrumb << "Accueil"
 elsif controller.action_name == "redirect" and @article
-  breadcrumb << "Thématiques : "
+  breadcrumb << "Tags : "
   unless @article.tags.empty?
     breadcrumb <<  @article.tags.map { |tag| 
-      link_to("#{tag.display_name}", tag.permalink_url, :rel => "tag nofollow", :title => "Cliquez pour voir les billets traitant de #{tag.display_name}") }.sort.join(", ")
+      link_to("#{tag.display_name}", tag.permalink_url, :rel => "tag nofollow", :title => "Read articles about #{tag.display_name}") }.sort.join(", ")
   end
 else
-  breadcrumb << link_to("Accueil", {:controller => "articles", :action => "index"}, :title => "Cliquez pour revenir à l'accueil")
+  breadcrumb << link_to("Home", {:controller => "articles", :action => "index"}, :title => "Home")
   breadcrumb << " &gt; "
 end
 

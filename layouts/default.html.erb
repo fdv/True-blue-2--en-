@@ -10,7 +10,6 @@
   <link rel="icon" href="/favicon.png" type="image/png" /> 
 
   <%= stylesheet_link_tag "/stylesheets/theme/style", :media => 'all' %>
-  <script type="text/javascript" src="/javascripts/theme/trueblue.js"></script>
   <%= page_header %>
 </head>
 <body>
@@ -38,8 +37,8 @@
       <%= render_sidebars %>
       <div id='about-me'>
         <h3>À propos</h3>
-        <p><img src='http://t37.net/images/fredericdevillamil.jpg' alt="Frédéric de Villamil" class="alignleft" />L'ergonomie web, l'utilisabilité et la qualité des logiciels sont trois grandes passions mises au services de ma profession.</p>
-        <p>J'axe mon travail sur une démarche constante tout au long du cycle de vie du produit alliant respect des standards, accessibilité et utilisabilité avec la conviction que le web s'adresse avant tout à l'utilisateur.</p>
+        <p><img src='http://t37.net/images/fredericdevillamil.jpg' alt="Frédéric de Villamil" class="alignleft" /><p>I'm a usability specialist, with a passion for UI and software quality.</p>
+        <p>I focus my work on both web standards, accessibility and usability from specs to delivery, convinced as I am that the web is made for users.</p>
       </div>
     </div>
     <br class='clear' />
@@ -50,10 +49,10 @@
       <div id='bottomnavigation'>
         <ul>
           <li <%= render_active_page 'sabonner' %>><a href='http://t37.net/pages/sabonner>S'abonner</a></li>
-          <li><a href='http://t37.net/files/cv.pdf' title="Mon Curiculum Vitae">Curriculum vitae.</a></li>
-          <li <%= render_active_page 'colophon' %>><a href='http://t37.net/pages/colophon' title="À propos du site et de l'auteur">À propos</a></li>
-          <li <%= render_active_archives %>><a href='http://t37.net/articles/archives' title="Lire les archives du site">Articles</a></li>
-          <li <%= render_active_index %>><a href='http://t37.net' title="Revenir à l'accueil">Accueil</a></li>
+          <li><a href='http://t37.net/files/cv.pdf' title="My Resume">Resume.</a></li>
+          <li <%= render_active_page 'colophon' %>><a href='http://en.t37.net/pages/colophon' title="About me">About</a></li>
+          <li <%= render_active_archives %>><a href='http://en.t37.net/archives' title="Read older articles">Articles</a></li>
+          <li <%= render_active_index %>><a href='http://en.t37.net' title="Home">Home</a></li>
         </ul>
       </div>
       <div id='credits'>

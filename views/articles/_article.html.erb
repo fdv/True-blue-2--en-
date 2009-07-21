@@ -6,7 +6,7 @@
 <% end%>
 
   <p class="author">
-    Le 
+    Posted on 
     <%= "#{article.published_at.strftime('%d')} #{_(article.published_at.strftime('%B'))} #{article.published_at.strftime('%Y à %Hh%M')}" %> |
     <%= category_links(article) unless article.categories.empty? %> |
     <% if controller.controller_name.include? 'redirect' -%>
@@ -21,7 +21,7 @@
     <% if article.extended? -%>
     <div class="extended">
       <% if controller.action_name == 'index' -%>
-      <p class="next"><%= link_to_permalink article,"&raquo; Lire la suite", '', '', 'nofollow' %></p>
+      <p class="next"><%= link_to_permalink article,"&raquo; Read more", '', '', 'nofollow' %></p>
       <% else -%>
       <%= article.html(:extended) %>
       <% end -%>
