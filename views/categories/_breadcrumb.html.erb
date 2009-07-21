@@ -1,5 +1,5 @@
 <% 
-breadcrumb = "#{link_to("Accueil", {:controller => "articles", :action => "index"}, :title => "Cliquez pour revenir à l'accueil")} &gt; "
+breadcrumb = "#{link_to("Home", {:controller => "articles", :action => "index"}, :title => "Cliquez pour revenir à l'Home")} &gt; "
 
 if params[:id]
   breadcrumb << link_to("Categories", { :controller => "categories", :action => "index" }) 

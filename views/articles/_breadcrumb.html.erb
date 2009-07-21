@@ -1,7 +1,7 @@
 <% 
 breadcrumb = ""
 if controller.controller_name == "articles" and controller.action_name == "index" and !params[:page]
-  breadcrumb << "Accueil"
+  breadcrumb << "Home"
 elsif controller.action_name == "redirect" and @article
   breadcrumb << "Tags : "
   unless @article.tags.empty?
